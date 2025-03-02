@@ -1,396 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="">
-      <!-- navbar start -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid px-md-5 py-3">
-          <a class="navbar-brand" href="#">Coffee</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#order">Order</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Menu
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Coffee</a></li>
-                  <li><a class="dropdown-item" href="#">Tea</a></li>
-                  <li><a class="dropdown-item" href="#">Milk</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Member
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Login</a></li>
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="#"
-                      data-bs-toggle="modal"
-                      data-bs-target="#register"
-                      >Register</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-danger" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
-        </div>
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="register"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Register
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form action="">
-                  <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Email</label>
-                    <input type="email" class="form-control" />
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Password</label>
-                    <input type="password" class="form-control" />
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Photo</label>
-                    <input type="file" class="form-control" accept="image/*" />
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Gender</label>
-                    <br />
-                    <input type="radio" name="" id="" />
-                    <label for="">Male</label>
-                    <input type="radio" name="" id="" />
-                    <label for="">Female</label>
-                  </div>
-                  <div class="mb-3">
-                    <label for="" class="form-label">Address</label>
-                    <textarea name="" id="" class="form-control"></textarea>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">
-                      Submit
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <!-- navbar end -->
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              src="./images/p1.jpg"
-              class="d-block w-100"
-              alt="./images/p1.jpg"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <div
-                class="d-flex justify-content-center align-items-center gap-3"
-              >
-                <img
-                  src="./images/p1.jpg"
-                  class="rounded-circle object-fit-cover"
-                  alt="./images/p1.jpg"
-                  style="width: 80px; height: 80px"
-                />
-                <h5>First slide label</h5>
-              </div>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./images/p2.jpg"
-              class="d-block w-100"
-              alt="./images/p2.jpg"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <div
-                class="d-flex justify-content-center align-items-center gap-3"
-              >
-                <img
-                  src="./images/p2.jpg"
-                  class="rounded-circle object-fit-cover"
-                  alt="./images/p1.jpg"
-                  style="width: 80px; height: 80px"
-                />
-                <h5>Second slide label</h5>
-              </div>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              src="./images/p3.jpg"
-              class="d-block w-100"
-              alt="./images/p3.jpg"
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <div
-                class="d-flex justify-content-center align-items-center gap-3"
-              >
-                <img
-                  src="./images/p3.jpg"
-                  class="rounded-circle object-fit-cover"
-                  alt="./images/p1.jpg"
-                  style="width: 80px; height: 80px"
-                />
-                <h5>Third slide label</h5>
-              </div>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="">
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid px-md-5 py-3">
+        <a class="navbar-brand" href="#">Coffee Shop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#order">Order</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Coffee</a></li>
+                <li><a class="dropdown-item" href="#">Tea</a></li>
+                <li><a class="dropdown-item" href="#">Milk</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Member
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#register">Register</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-danger" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
       </div>
-    </header>
-    <main>
-      <section id="about-us" class="p-md-5" style="background-color: #f9f9f9">
-        <div
-          class="container p-3 px-md-0 shadow-lg rounded-5"
-          style="background-color: #fff"
-        >
-          <h2 class="text-center fs-1 mb-4 text-decoration-underline">About</h2>
-          <div class="row g-4" style="min-height: 300px">
-            <div class="col-md-6 px-5 text-center">
-              <img
-                src="./images/p2.jpg"
-                width="350px"
-                class="rounded-5 m-auto"
-                alt=""
-              />
+
+      <!-- Modal -->
+      <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Register
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="col-md-6 px-5">
-              <h3 class="text-center text-md-start">
-                Lorem ipsum dolor sit amet.
-              </h3>
-              <p class="text-center text-md-start">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam repellat natus ut. Quisquam, doloribus. Quisquam
-                repellat natus ut. Quisquam, doloribus. Quisquam repellat natus
-                ut. Quisquam, doloribus. Quisquam repellat natus ut. Quisquam,
-                doloribus. Quisquam repellat natus ut. Quisquam, doloribus.
-              </p>
-              <div class="text-center text-md-start">
-                <a href="#" class="btn btn-primary">Learn more</a>
+            <div class="modal-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="" class="form-label">Name</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Email</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Password</label>
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Photo</label>
+                  <input type="file" class="form-control" accept="image/*" />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Gender</label>
+                  <br />
+                  <input type="radio" name="" id="" />
+                  <label for="">Male</label>
+                  <input type="radio" name="" id="" />
+                  <label for="">Female</label>
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Address</label>
+                  <textarea name="" id="" class="form-control"></textarea>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/p1.jpg" class="d-block w-100" alt="./images/p1.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+              <img src="./images/p1.jpg" class="rounded-circle object-fit-cover" alt="./images/p1.jpg"
+                style="width: 80px; height: 80px" />
+              <h5>First slide label</h5>
+            </div>
+            <p>
+              Some representative placeholder content for the first slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/p2.jpg" class="d-block w-100" alt="./images/p2.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+              <img src="./images/p2.jpg" class="rounded-circle object-fit-cover" alt="./images/p1.jpg"
+                style="width: 80px; height: 80px" />
+              <h5>Second slide label</h5>
+            </div>
+            <p>
+              Some representative placeholder content for the second slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/p3.jpg" class="d-block w-100" alt="./images/p3.jpg" />
+          <div class="carousel-caption d-none d-md-block">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+              <img src="./images/p3.jpg" class="rounded-circle object-fit-cover" alt="./images/p1.jpg"
+                style="width: 80px; height: 80px" />
+              <h5>Third slide label</h5>
+            </div>
+            <p>
+              Some representative placeholder content for the third slide.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section id="about-us" class="p-md-5" style="background-color: #f9f9f9">
+      <div class="container p-3 px-md-0 shadow-lg rounded-5" style="background-color: #fff">
+        <h2 class="text-center fs-1 mb-4 text-decoration-underline">About</h2>
+        <div class="row g-4" style="min-height: 300px">
+          <div class="col-md-6 px-5 text-center">
+            <img src="./images/p2.jpg" width="350px" class="rounded-5 m-auto" alt="" />
+          </div>
+          <div class="col-md-6 px-5">
+            <h3 class="text-center text-md-start">
+              Lorem ipsum dolor sit amet.
+            </h3>
+            <p class="text-center text-md-start">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quisquam repellat natus ut. Quisquam, doloribus. Quisquam
+              repellat natus ut. Quisquam, doloribus. Quisquam repellat natus
+              ut. Quisquam, doloribus. Quisquam repellat natus ut. Quisquam,
+              doloribus. Quisquam repellat natus ut. Quisquam, doloribus.
+            </p>
+            <div class="text-center text-md-start">
+              <a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="products" class="p-4">
+      <div class="container p-3 px-md-0 shadow-lg rounded-5" style="background-color: #fff">
+        <h2 class="text-center fs-1 mb-4 text-decoration-underline">
+          Products
+        </h2>
+        <div class="row g-4 px-2">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p2.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p2.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p3.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="./images/p3.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="products" class="p-4">
-        <div
-          class="container p-3 px-md-0 shadow-lg rounded-5"
-          style="background-color: #fff"
-        >
-          <h2 class="text-center fs-1 mb-4 text-decoration-underline">
-            Products
-          </h2>
-          <div class="row g-4 px-2">
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p1.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p2.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p1.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p2.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p3.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card">
-                <img src="./images/p3.jpg" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
